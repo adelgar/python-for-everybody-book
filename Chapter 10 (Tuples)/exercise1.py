@@ -14,11 +14,11 @@ while True:
 		if line.startswith('From'):
 			words = line.split()
 			if not words[0] == 'From:':
-				if words[1] not in counts:
+				'''if words[1] not in counts:
 					counts[words[1]] = 1
 				else:
-					counts[words[1]] += 1
-				#counts[words[1]] = counts.get(words[1], 0) + 1
+					counts[words[1]] += 1'''
+				counts[words[1]] = counts.get(words[1], 0) + 1
 	
 	lst = list()
 	for key, val in list(counts.items()):
